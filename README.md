@@ -1,6 +1,7 @@
 Web-Application on Jetty on Docker
 =================
 This is a example project showing use of docker & docker compose to start a Jetty and deploy your application.
+Scaling the application is now possible. Added haproxy for load balancing.
 ## Project structure
 ```
       /
@@ -20,7 +21,16 @@ Checkout this git project and run the following commands
    NOTE: If 127.0.0.1 doesnt work please replace it with your machines ip
 
 ## How to connect to the container
-     $ docker exec -it c4i-web sh
+     $ docker exec -it jetty-web_1 sh
+
+## How to scale 
+     $ docker-compose scale web=4
+
+## How to check the process 
+     $ docker-compose ps
+
+## How to check the logs 
+     $ docker-compose logs
 
 ## How to stop
      $ docker-compose stop
@@ -29,7 +39,7 @@ Checkout this git project and run the following commands
      $ docker-compose rm
 
 ## How to remove the image
-     $ docker rmi jetty_web
+     $ docker rmi jetty_web dockercloud/haproxy
 
 ## Author
 Abhijeet Burle

@@ -4,14 +4,13 @@ FROM jetty:9.3.12-jre8
 # Docker maintainer
 MAINTAINER abhijeetburle@gmail.com
 
-# [C4I] Individual labels
-LABEL com.codeforinterview.version="0.0.1-beta" \
-      com.example.version.release-date="2016/10/18" \
-      com.example.version.is-production="false"
+# Individual labels
+LABEL com.github.abhijeetburle.dockerjettyweb.version="1.0.1-beta" \
+      com.github.abhijeetburle.dockerjettyweb.release-date="2016/11/04" \
+      com.github.abhijeetburle.dockerjettyweb.is-production="false"
 
-# [C4I] Envirnmetal variables
-ENV C4I_ISPROD false
-ENV C4I_APP_NAME "Code for interview"
+# Envirnmetal variables
+ENV DJW_ISPROD false
 
-# [C4I] RUN
+# RUN
 RUN java -jar "$JETTY_HOME/start.jar" --add-to-startd=http2 --approve-all-licenses
