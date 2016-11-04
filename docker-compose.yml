@@ -4,10 +4,16 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: c4i-web
-    ports:
-      - 80:8080
-      - 443:8443
+    expose:
+      - 8080
     volumes:
       - ./deployments/webapps:/var/lib/jetty/webapps
       - ./deployments/log:/var/log/jetty
+  lb:
+    image: dockercloud/haproxy
+    ports:
+      - "80:80"
+    links:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
