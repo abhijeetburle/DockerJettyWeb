@@ -1,0 +1,4 @@
+# Ignore patterns
+*.md
+!README.md
+README-secret.md
