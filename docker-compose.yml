@@ -10,7 +10,9 @@ services:
       - ./deployments/webapps:/var/lib/jetty/webapps
       - ./deployments/log:/var/log/jetty
   lb:
-    image: dockercloud/haproxy
+    image: dockercloud/haproxy:1.6.0
+    depends_on:
+      - web
     ports:
       - "80:80"
     links:

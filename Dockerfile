@@ -14,3 +14,6 @@ ENV DJW_ISPROD false
 
 # RUN
 RUN java -jar "$JETTY_HOME/start.jar" --add-to-startd=http2 --approve-all-licenses
+
+# OVERRIDE CMD
+# CMD ["java","-jar","/usr/local/jetty/start.jar","-Djetty.http.port=80","-Djetty.ssl.port=443"]
