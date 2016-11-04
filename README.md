@@ -1,7 +1,7 @@
 Web-Application on Jetty on Docker
 =================
-Project structure
 This is a example project showing use of docker & docker compose to start a Jetty and deploy your application.
+## Project structure
 ```
       /
       |-- docker-compose.yml    Docker compose file
