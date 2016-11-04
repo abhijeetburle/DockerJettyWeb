@@ -1,12 +1,18 @@
 Web-Application on Jetty on Docker
 =================
 Project structure
-      * /
-      * |-- docker-compose.yml    Docker compose file
-      * |-- Dockerfile            Docker file
-      * |-- deployments
-      *        |-- webapps       Place your awesome Jar's here
-      *              |-- CaptainsLog.war  Sample application (you can remove/replace this) 
+This is a example project showing use of docker & docker compose to start a Jetty and deploy your application.
+```
+      /
+      |-- docker-compose.yml    Docker compose file
+      |-- Dockerfile            Docker file
+      |-- deployments
+              |-- webapps       Place your awesome Jar's here
+                    |-- CaptainsLog.war  Sample application (you can remove/replace this) 
+```
+You need to install Docker on your machine
+Checkout this git project and run the following commands
+
 ## How to build and run
      $ docker-compose up -d --build
    
