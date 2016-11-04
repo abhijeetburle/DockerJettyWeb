@@ -1,17 +1,17 @@
 Web-Application on Jetty on Docker
 =================
 Project structure
-      /
-      |-- docker-compose.yml    Docker compose file
-      |-- Dockerfile            Docker file
-      |-- deployments
-              |-- webapps       Place your awesome Jar's here
-                    |-- CaptainsLog.war  Sample application (you can remove/replace this) 
+      * /
+      * |-- docker-compose.yml    Docker compose file
+      * |-- Dockerfile            Docker file
+      * |-- deployments
+      *        |-- webapps       Place your awesome Jar's here
+      *              |-- CaptainsLog.war  Sample application (you can remove/replace this) 
 ## How to build and run
      $ docker-compose up -d --build
    
    Access your application using [CaptainsLog] (http://127.0.0.1/CaptainsLog) 
-   NOTE: If 127.0.0.1 doesnt work please please it with your machines ip
+   NOTE: If 127.0.0.1 doesnt work please replace it with your machines ip
 
 ## How to connect to the container
      $ docker exec -it c4i-web sh
